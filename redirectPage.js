@@ -3,6 +3,9 @@ function redirectPage(destination) {
         case 'adminLoginPage':
             window.location.href = 'adminLoginPage.php';  // Updated path
             break;
+        case 'adminRegistrationPage':
+            window.location.href = 'adminLoginPage.php';  // Updated path
+            break;
         case 'adminDashboard':
             window.location.href = 'adminDashboard.php';  // Updated path
             break;

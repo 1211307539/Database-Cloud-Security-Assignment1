@@ -22,19 +22,18 @@ if (isset($_POST['submit'])) {
     if (empty($errors)) {
         try {
             // Check if email already exists
-            $stmt = $pdo->prepare("SELECT 1 FROM admins WHERE ADMIN_EMAIL = ?");
+            $stmt = $conn->prepare("SELECT 1 FROM heather.admins WHERE ADMIN_EMAIL = ?");
             $stmt->execute([$email]);
 
             if ($stmt->fetch()) {
                 array_push($errors, "Email already registered!");
             } else {
-                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-                $insert = $pdo->prepare("INSERT INTO admins 
+                $insert = $conn->prepare("INSERT INTO heather.admins 
                     (ADMIN_EMAIL, ADMIN_PASS, ADMIN_FNAME, ADMIN_LNAME, ADMIN_CONTACT, USER_TYPE)
                     VALUES (?, ?, ?, ?, ?, 'Admin')");
 
-                if ($insert->execute([$email, $hashedPassword, $fname, $lname, $phone])) {
+                if ($insert->execute([$email, $password, $fname, $lname, $phone])) {
                     echo "<script>alert('You are registered successfully.');
                           window.location.href = 'adminLoginPage.php';</script>";
                     exit;
