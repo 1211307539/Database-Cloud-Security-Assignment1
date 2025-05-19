@@ -1,7 +1,19 @@
-TT9L Group 3:
+CCS6344
+Database and Cloud Security
+
+
+Assignment 1 (10%) 
+Tutorial Section: TT1L 
+Group No. :  25
+
+
 <br>
-Farah Kamila binti Yahya - 1211103293
+Nur Alya Batrisyia Binti Nor Azizi
+ - 1211105725
 <br>
-Aida Maisarah binti Hisam - 1211103282
+Amira Raina Binti Azlan Rahman
+ - 1211307539
 <br>
-Amira Raina binti Azlan Rahman - 1211307539
+Anis Nur Hanani Binti Azhar
+- 1221305140
+
